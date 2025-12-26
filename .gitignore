@@ -1,0 +1,46 @@
+### Core LaTeX temporary files ###
+*.aux
+*.log
+*.out
+*.toc
+*.lot
+*.lof
+*.glo
+*.idx
+*.ist
+*.acn
+*.acr
+*.alg
+*.glg
+*.gls
+*.glsdefs
+
+### Bibliography auxiliary files (BibTeX/Biber) ###
+*.bbl
+*.blg
+*.bcf
+*.xml
+
+### Build tools (latexmk & VS Code LaTeX Workshop) ###
+# 这些通常是 VS Code 自动编译产生的
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.synctex
+
+
+*.pdf
+
+### TexStudio / Editors ###
+*.txss
+*.tps
+*.bak
+*.sav
+# WinEdt
+*.prj
+
+
+### Operating System files ###
+.DS_Store
+Thumbs.db
