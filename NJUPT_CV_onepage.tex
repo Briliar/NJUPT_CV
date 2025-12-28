@@ -59,8 +59,8 @@
 \pagenumbering{gobble}								
 
 % 列表间距调整 (为了在有限的A4纸里塞下更多吹牛的内容)
-\setlist[itemize]{topsep=0em, leftmargin=*}		
-\setlist[enumerate]{topsep=0em, leftmargin=*}	
+\setlist[itemize]{topsep=0em,parsep=0em, leftmargin=*}		
+\setlist[enumerate]{topsep=0em,parsep=0em, leftmargin=*}	
 
 % --- 标题格式设置 ---
 \titleformat{\section}					    
@@ -108,8 +108,8 @@
 \definecolor{Blue}{RGB}{0, 80, 158}
 
 % 行间距：调大一点显得字多，调小一点显得内容多，目前是 1.2 倍
-\renewcommand{\arraystretch}{1.2}
-\linespread{1.2}
+\renewcommand{\arraystretch}{1.1}
+\linespread{1.1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    ！！！！！！！！ 变量定义区 ！！！！！！！！
@@ -194,7 +194,7 @@
 
     % --- 教育背景 ---
     \vspace{-2em}
-	\section{\makebox[\widthof{\faGraduationCap}][c]{\color{Blue}{\faGraduationCap}}\hspace{0.5em}教育背景}
+	\section{\makebox[1em][c]{\color{Blue}{\faGraduationCap}}\hspace{0.5em}教育背景}
 	\vspace{-1em}
     \begin{table}[h!]
         \begin{tabularx}{\textwidth}{XXp{\widthof{2021年 -- 2025年}}}
@@ -258,41 +258,6 @@
         \item 该系统有效降低了组会的被骂率，提升了实验室整体幸福感指数。
     \end{itemize}
     
-    
-    \newpage
-     % 终于用完一页了，加一页展示怎么加页眉页脚
-     % --- 这一坨是页眉，动了这代码，校徽可能会飞到月球上去 ---
-    \begin{tikzpicture}[remember picture, overlay]
-		\node[anchor=north, inner sep=0pt](header) at (current page.north){
-			\includegraphics[width=\paperwidth]{images/header.png}
-		};
-		\node[anchor=west](school_logo) at (header.west){
-			\hspace{0.5cm}
-			\includegraphics[width=0.25\textwidth]{images/njupt_logo.png}
-		};
-		\node[anchor=east](school_name) at(header.east){
-			\textcolor{white}{\textbf{\school}}
-			\hspace{0.5cm}
-		};
-	\end{tikzpicture}
-	\vspace{-4em}
-
-	% --- 这一坨是页脚 ---
-	\begin{tikzpicture}[remember picture, overlay]
-		\node[anchor=south, inner sep=0pt](footer) at (current page.south){
-			\includegraphics[width=\paperwidth]{images/footer.png}
-		};
-        % 联系方式
-        \node[anchor=center] at(footer.center){\contact};
-	\end{tikzpicture}
-	
-	% --- 这一坨是背景大Logo，透明度调得很低，防止喧宾夺主 ---
-	\begin{tikzpicture}[remember picture, overlay]
-		\node[opacity=0.1] at(current page.center){
-			\includegraphics[width=0.7\paperwidth, keepaspectratio]{images/njupt.png}
-		};
-	\end{tikzpicture}
-    
     % --- 竞赛经历 ---
     \section{\makebox[1em][c]{\color{Blue}{\faTrophy}}\hspace{0.5em}竞赛/科研经历}
     \vspace{-1em}
@@ -303,7 +268,7 @@
             \textbf{2023年全国大学生退堂鼓演奏大赛} & 首席鼓手 & 省级-特等奖 & 2023年12月\\
         \end{tabularx}
     \end{table}
-
+    \vspace{-1em}
     % --- 其他 ---
     \section{\makebox[1em][c]{\color{Blue}{\faInfo}}\hspace{0.5em}其他}
     \begin{itemize}
